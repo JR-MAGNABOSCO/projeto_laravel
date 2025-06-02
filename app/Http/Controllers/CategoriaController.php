@@ -11,7 +11,7 @@ class CategoriaController extends Controller
 {
     public function index()
     {
-        return Categoria::with('noticias')->get(); // ou with('noticias')
+        return Categoria::withCount('noticias')->get(); // ou with('noticias')
     }
 
     public function noticias($id)
