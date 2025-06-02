@@ -10,7 +10,7 @@ class NoticiaController extends Controller
 {
     public function index()
     {
-            return Noticia::all();
+           return Noticia::orderBy('created_at', 'desc')->paginate(5);
     }
 
     public function store(Request $request)
